@@ -1,1 +1,33 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
+  max-width: 1500px;
+  font-family: Verdana, sans-serif;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+body {
+  background-color: #495057;
+}
+
+body .main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(3, 400px);
+  grid-auto-rows: 400px;
+  gap: 5px;
+}
+
+.navbar-section {
+  background-color: #212529;
+}
+
+img {
+  width: 40%;
+  height: auto;
+}
+/*# sourceMappingURL=style.css.map */
