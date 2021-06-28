@@ -9,21 +9,120 @@
     font-style: italic;
     text-transform: capitalize;
 }
-body{
-    background-color:#495057;
+$main-color:#495057;
+$secendery-color:#212529;
+$icon-color:#ffc300;
+$text-color:#333333;
+$text-color2:#111;
+$nav-icon-color:#eee;
+$green:#38b000;
+$padd:"padding";
+$mar:"margin";
+$f-s:"font-size";
+$t-align:"text-align";
+$box-s:"box-shadow";
+@mixin display($dir,$just,$align,$wrap) {
+    display: flex;
+    flex-direction:$dir;
+    justify-content:$just;
+    align-items:$align;
+    flex-wrap:$wrap;
+}
+@mixin border-rad($border) {
+    border-radius: $border;
+}
+@mixin animation($params) {
+    animation:$params;
+}
+@mixin transition($trans) {
+    transition:$trans;
+}
+    body{
+    background-color:$main-color;
     .main{
    display: grid;
    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
    grid-template-rows:repeat(3,400px);
    grid-auto-rows:400px;
-   gap:5px;
-  }
+   gap:5px;   
+}
 }
 .navbar-section{
-   background-color: #212529;
+    h1{
+        #{$t-align}: center;
+        #{$padd}: 5px 0 5px 0;   
+        background-image: linear-gradient(to right, #38b000,#8b5e34,$icon-color);
+        opacity: 70%;
+        letter-spacing: .1em;
+        color: $text-color2;
+        &::first-letter{
+            #{$f-s}:1.2em;
+        }
+    }
+   nav{
+    height: 100px;
+    .navbar-main{
+        @include display(row-reverse,flex-start,center,nowrap);
+        #{$mar}-left:92%;
+        #nav-main{
+            color: $nav-icon-color;
+            #{$f-s}:1.6em;
+            #{$padd}:20px 20px 0 0;
+           @include transition(color 1s ease-out);
+           &:hover{
+               color:$green;  
+           }        
+           }
+           &:hover{
+               .item{
+                   display: inline-block;
+                @include animation(menu 2s 1 forwards);
+                @keyframes menu {
+                    from{transform: none;}
+                    to{transform:translate(-30px,0);}
+                }
+            }
+           }
+    }
+    .item{
+        i{
+        color: $secendery-color;
+        #{$f-s}:1.3em;
+        #{$mar}:20px 30px 0 0;
+        background-color: #fff;
+        #{$box-s}:0 0 1px 5px #fff ;
+        @include border-rad(25px);
+        @include animation(col 3s ease-out infinite);
+        position: relative;
+        @keyframes col {
+            from{@include border-rad(25px)};
+            to{@include border-rad(5px)};
+        }
+        @include transition(color 2s ease-out);
+        &:hover{
+            color:$green;
+        }
+        }
+       display:none;
+    }
+   }
  }
+
+
+
+
+
+
+
+
+
+
+
 img{
-    width: 40%;
+    width: 60%;
     height: auto;
 }
 
+.main{
+    margin-top: 20px;
+}

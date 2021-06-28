@@ -22,12 +22,92 @@ body .main {
   gap: 5px;
 }
 
-.navbar-section {
-  background-color: #212529;
+.navbar-section h1 {
+  text-align: center;
+  padding: 5px 0 5px 0;
+  background-image: linear-gradient(to right, #38b000, #8b5e34, #ffc300);
+  opacity: 70%;
+  letter-spacing: .1em;
+  color: #111;
+}
+
+.navbar-section h1::first-letter {
+  font-size: 1.2em;
+}
+
+.navbar-section nav {
+  height: 100px;
+}
+
+.navbar-section nav .navbar-main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-left: 92%;
+}
+
+.navbar-section nav .navbar-main #nav-main {
+  color: #eee;
+  font-size: 1.6em;
+  padding: 20px 20px 0 0;
+  transition: color 1s ease-out;
+}
+
+.navbar-section nav .navbar-main #nav-main:hover {
+  color: #38b000;
+}
+
+.navbar-section nav .navbar-main:hover .item {
+  display: inline-block;
+  animation: menu 2s 1 forwards;
+}
+
+@keyframes menu {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translate(-30px, 0);
+  }
+}
+
+.navbar-section nav .item {
+  display: none;
+}
+
+.navbar-section nav .item i {
+  color: #212529;
+  font-size: 1.3em;
+  margin: 20px 30px 0 0;
+  background-color: #fff;
+  box-shadow: 0 0 1px 5px #fff;
+  border-radius: 25px;
+  animation: col 3s ease-out infinite;
+  position: relative;
+  transition: color 2s ease-out;
+}
+
+@keyframes col {
+  from {
+    border-radius: 25px;
+  }
+  to {
+    border-radius: 5px;
+  }
+}
+
+.navbar-section nav .item i:hover {
+  color: #38b000;
 }
 
 img {
-  width: 40%;
+  width: 60%;
   height: auto;
+}
+
+.main {
+  margin-top: 20px;
 }
 /*# sourceMappingURL=style.css.map */
