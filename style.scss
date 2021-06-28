@@ -16,11 +16,13 @@ $text-color:#333333;
 $text-color2:#111;
 $nav-icon-color:#eee;
 $green:#38b000;
+$star-color:#fcbf49;
 $padd:"padding";
 $mar:"margin";
 $f-s:"font-size";
 $t-align:"text-align";
 $box-s:"box-shadow";
+$bor-r:"border-radius";
 @mixin display($dir,$just,$align,$wrap) {
     display: flex;
     flex-direction:$dir;
@@ -45,6 +47,7 @@ $box-s:"box-shadow";
    grid-template-rows:repeat(3,400px);
    grid-auto-rows:400px;
    gap:5px;   
+   #{$mar}:20px;
 }
 }
 .navbar-section{
@@ -108,8 +111,60 @@ $box-s:"box-shadow";
    }
  }
 
+.first-section-image{
+    @include display(column,space-evenly,center,nowrap);
+    .img1{
+        #{$mar}:0 13% 0 7%;
+        width:85%;
+        #{$bor-r}:10px;
+        #{$box-s}:0 52px 4px 0 $nav-icon-color;
+    }
+    .first-span-icon{
+        color:$star-color;
+    }
+    p{
+        letter-spacing:0.1em;
+    }
+}
 
-
+.second-section-image{
+    @include display(column,space-evenly,center,nowrap);
+    .img2{
+        #{$mar}:0 13% 0 7%;
+        width:85%;
+        #{$bor-r}:10px;
+        #{$box-s}:0 52px 4px 0 $nav-icon-color;
+    }
+    .second-span-icon{
+        color:$star-color;
+        #{$mar}:-48px 0 0 0 ;
+        #last-star{
+            color: rgba($color: #fcbf49, $alpha: 0.4);
+        }
+    }
+    p{
+        letter-spacing:0.1em;
+        #{$mar}:-38px 0 0 0 ;
+    }
+}
+.third-section-image{
+    @include display(column,space-evenly,center,nowrap)
+}
+.fourth-section-image{
+    @include display(column,space-evenly,center,nowrap)
+}
+.fifth-section-image{
+    @include display(column,space-evenly,center,nowrap)
+}
+.sixth-section-image{
+    @include display(column,space-evenly,center,nowrap)
+}
+.seventh-section-image{
+    @include display(column,space-evenly,center,nowrap)
+}
+.eighth-section-image{
+    @include display(column,space-evenly,center,nowrap)
+}
 
 
 

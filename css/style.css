@@ -20,6 +20,7 @@ body .main {
   grid-template-rows: repeat(3, 400px);
   grid-auto-rows: 400px;
   gap: 5px;
+  margin: 20px;
 }
 
 .navbar-section h1 {
@@ -100,6 +101,106 @@ body .main {
 
 .navbar-section nav .item i:hover {
   color: #38b000;
+}
+
+.first-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.first-section-image .img1 {
+  margin: 0 13% 0 7%;
+  width: 85%;
+  border-radius: 10px;
+  box-shadow: 0 52px 4px 0 #eee;
+}
+
+.first-section-image .first-span-icon {
+  color: #fcbf49;
+}
+
+.first-section-image p {
+  letter-spacing: 0.1em;
+}
+
+.second-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.second-section-image .img2 {
+  margin: 0 13% 0 7%;
+  width: 85%;
+  border-radius: 10px;
+  box-shadow: 0 52px 4px 0 #eee;
+}
+
+.second-section-image .second-span-icon {
+  color: #fcbf49;
+  margin: -48px 0 0 0;
+}
+
+.second-section-image .second-span-icon #last-star {
+  color: rgba(252, 191, 73, 0.4);
+}
+
+.second-section-image p {
+  letter-spacing: 0.1em;
+  margin: -38px 0 0 0;
+}
+
+.third-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.fourth-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.fifth-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.sixth-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.seventh-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.eighth-section-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 img {
