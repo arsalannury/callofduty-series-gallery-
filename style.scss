@@ -23,6 +23,12 @@ $f-s:"font-size";
 $t-align:"text-align";
 $box-s:"box-shadow";
 $bor-r:"border-radius";
+$sectionOneImageColor:#90be6d;
+$sectionTwoImageColor:#885d35;
+$main-color2:(
+    color-green:#007f5f,
+    color-black:#111,
+);
 @mixin display($dir,$just,$align,$wrap) {
     display: flex;
     flex-direction:$dir;
@@ -38,6 +44,27 @@ $bor-r:"border-radius";
 }
 @mixin transition($trans) {
     transition:$trans;
+}
+@mixin  hover-image-style($width,$height,$top,$right,$backcolor) {
+    line-height: 4em;
+        text-transform: lowercase;
+        color: map-get($map: $main-color2, $key:color-black );
+        background-color: $backcolor;
+        #{$bor-r}:15px; 
+        text-align: center;
+        z-index:10;
+        width: $width;
+        height: $height;
+        position: absolute;
+        top: $top;
+        right:$right;   
+        display: none;
+        font-weight: 600;
+        #{$f-s}:0.9em;
+        @include transition(opacity 2s ease-in);
+        &:hover{
+            opacity:70%;
+        }
 }
     body{
     background-color:$main-color;
@@ -112,28 +139,47 @@ $bor-r:"border-radius";
  }
 
 .first-section-image{
+    position: relative;
     @include display(column,space-evenly,center,nowrap);
     .img1{
         #{$mar}:0 13% 0 7%;
         width:85%;
         #{$bor-r}:10px;
-        #{$box-s}:0 52px 4px 0 $nav-icon-color;
+        #{$box-s}:0 52px 2px 0 $nav-icon-color;
     }
     .first-span-icon{
         color:$star-color;
     }
     p{
-        letter-spacing:0.1em;
+        letter-spacing:0.1em; 
     }
+    .hover-p{
+        @include hover-image-style(86%,50%,2px,31px,$sectionOneImageColor);
+        @include animation( disp 3s 1);
+        @keyframes disp {
+            from{height:0;}
+            to{height:50%;}
+            from{color:#fff}
+            to{color:$secendery-color;}
+        }  
+    }
+    &:hover{
+        .hover-p{
+            display: block;
+            height: 50%;
+        }
+    }
+   
 }
 
 .second-section-image{
+    position: relative;
     @include display(column,space-evenly,center,nowrap);
     .img2{
         #{$mar}:0 13% 0 7%;
         width:85%;
         #{$bor-r}:10px;
-        #{$box-s}:0 52px 4px 0 $nav-icon-color;
+        #{$box-s}:0 52px 2px 0 $nav-icon-color;
     }
     .second-span-icon{
         color:$star-color;
@@ -146,9 +192,54 @@ $bor-r:"border-radius";
         letter-spacing:0.1em;
         #{$mar}:-38px 0 0 0 ;
     }
+    .hover-p2{
+        @include hover-image-style(86%,30%,83px,31px,$sectionTwoImageColor);
+        @include animation( disp2 2s 1);
+        @keyframes disp2 {
+            from{height:0;}
+            to{height:30%;}
+            from{color:#fff}
+            to{color:$secendery-color;}
+        }  
+    }
+    &:hover{
+        .hover-p2{
+            display: block;
+            height: 30%;
+        }
+    }
 }
 .third-section-image{
-    @include display(column,space-evenly,center,nowrap)
+    position:relative;
+    @include display(column,space-evenly,center,nowrap);
+    .img3{
+        #{$mar}:0 13% 0 7%;
+        width:85%;
+        #{$bor-r}:10px;
+        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+    }
+    .third-span-icon{
+        color:$star-color;
+    }
+    p{
+        letter-spacing:0.1em;
+    }
+    .hover-p3{
+        @include hover-image-style(86%,35%,2px,31px,#7f7f7f);
+        @include animation(disp3 2s 1);
+        @keyframes disp3 {
+            from{height:0;}
+            to{height:35%;}
+            from{color:#fff}
+            to{color:$secendery-color;}
+        }
+    }
+    &:hover{
+        .hover-p3{
+        display: block;
+        height: 35%;
+        }
+    }
 }
 .fourth-section-image{
     @include display(column,space-evenly,center,nowrap)
