@@ -247,23 +247,24 @@ $main-color2:(
     position: relative;
     @include display(column,space-evenly,center,nowrap);
     .img4{
-        #{$mar}:10px 0 0 1.5%;
-        width:95%;
+        #{$mar}:10px 0 0 5%;
+        width:90%;
         #{$bor-r}:10px;
         #{$box-s}:0 52px 2px 0 $nav-icon-color;
     }
     .fourth-span-icon{
         color:$star-color;
+        #{$mar}-top:-9px;
         #last-star4{
             color:$last-star-color;
         }
     }
     p{
         letter-spacing:0.1em; 
-        #{$mar}-top:5px;
+        #{$mar}-top:-1px;
     }
     .hover-p4{
-        @include hover-image-style(96%,50%,2px,12.5px,#212529);
+        @include hover-image-style(91%,50%,17px,18px,#212529);
         @include animation( disp4 3s 1 forwards);
         @keyframes disp4 {
             from{height:0;}
@@ -358,7 +359,40 @@ $main-color2:(
 
 }
 .seventh-section-image{
-    @include display(column,space-evenly,center,nowrap)
+    grid-column:1/3;
+    position: relative;
+    @include display(column,space-evenly,center,nowrap);
+    .img7{
+        #{$mar}:20px 0 0 16%;
+        width:70%;
+        #{$bor-r}:10px;
+        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+    }
+    .seventh-span-icon{
+        color:$star-color;
+        #{$mar}:-5px 0 0 2px;
+    }
+    p{
+        letter-spacing:0.1em;
+        #{$mar}:0 0 0 2px;
+    }
+    .hover-p7{
+         #{$padd}:2px;
+        @include hover-image-style(71%,35%,23px,109px,#dedede);
+        @include animation(disp55 2s 1 forwards);
+        @keyframes disp55 {
+            from{height:0;}
+            to{height:56%;}
+            from{color:#fff}
+            to{color:$secendery-color}
+        }
+    }
+    &:hover{
+        .hover-p7{
+        display: block;
+        height: 56%;
+        }
+    }
 }
 .eighth-section-image{
     @include display(column,space-evenly,center,nowrap)
