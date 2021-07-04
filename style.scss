@@ -79,6 +79,9 @@ $main-color2:(
    #{$mar}:20px;
 }
 }
+.main{
+    margin-top: 20px;
+}
 .navbar-section{
     h1{
         #{$t-align}: center;
@@ -395,21 +398,39 @@ $main-color2:(
     }
 }
 .eighth-section-image{
-    @include display(column,space-evenly,center,nowrap)
-}
+    position:relative;
+    @include display(column,space-evenly,center,nowrap);
+    .img8{
+        #{$mar}:0 13px 0 10px;
+        width:95%;
+        height:130%;
+        #{$bor-r}:10px;
+        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+    }
+    .eighth-span-icon{
+        color:$star-color;
+        #{$mar}: 58px 0 0 0;
+    }
+    p{
+        letter-spacing:0.1em;
+       #{$mar}: 0 0 48px 0;
+    }
+    .hover-p8{
+         #{$padd}:2px;
+        @include hover-image-style(96%,35%,8px,8px,#3f37c9);
+        @include animation(disp8 2s 1);
+        @keyframes disp8 {
+            from{height:0;}
+            to{height:35%;}
+            from{color:#fff}
+            to{color:$secendery-color}
+        }
+    }
+    &:hover{
+        .hover-p8{
+        display: block;
+        height: 35%;
+        }
+    }
 
-
-
-
-
-
-
-
-img{
-    width: 60%;
-    height: auto;
-}
-
-.main{
-    margin-top: 20px;
 }
