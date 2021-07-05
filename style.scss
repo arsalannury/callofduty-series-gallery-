@@ -69,18 +69,16 @@ $main-color2:(
 }
     body{
         overflow-x: hidden;
-    background-color:$main-color;
+    background-color:$main-color; 
     .main{
-   display: grid;
-   grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
-   grid-template-rows:repeat(3,400px);
-   grid-auto-rows:400px;
-   gap:5px;   
+        display: grid;
+        grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+        grid-template-rows:repeat(3,400px);
+        grid-auto-rows:400px;
+        gap:5px;  
    #{$mar}:20px;
+   margin-top: 20px;
 }
-}
-.main{
-    margin-top: 20px;
 }
 .navbar-section{
     h1{
@@ -146,6 +144,7 @@ $main-color2:(
 .first-section-image{
     position: relative;
     @include display(column,space-evenly,center,nowrap);
+    
     .img1{
         #{$mar}:0 13% 0 7%;
         width:85%;
@@ -334,7 +333,7 @@ $main-color2:(
         #{$bor-r}:10px;
         #{$box-s}:0 52px 2px 0 $nav-icon-color;
     }
-    .fifth-span-icon{
+    .sixth-span-icon{
         color:$star-color;
         #{$padd}: 25px 0 0 0;
     }
@@ -430,6 +429,151 @@ $main-color2:(
         .hover-p8{
         display: block;
         height: 35%;
+        }
+    }
+
+}
+
+
+// media screen style !!!!!!!!!!!! //
+@media screen and (max-width:600px ){
+    .seventh-section-image{
+        grid-column: 1/1;
+    }
+}
+@media screen and (max-width:400px ) {
+    body{
+        overflow-x: hidden;
+        .main{
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        }
+    }
+    .navbar-section{
+        h1{
+            #{$padd}: 8px 0 8px 0;
+        }
+        nav{
+           .navbar-main{
+            #{$mar}-left:72%;
+           }
+        }
+    }
+    .first-section-image{
+        @include display(column,center,center,nowrap);
+        // .img1{
+        //  height:118%;
+        // }
+        &:hover{
+            .hover-p{
+            display: none;
+            }
+        }
+    }
+    .second-section-image{
+        @include display(column,center,center,nowrap);
+        #{$mar}: 0 10px 20px 0;
+        .second-span-icon{
+            color:$star-color;
+            #{$mar}: 26px 0 0 5px ;
+            #last-star{
+                color: $last-star-color;
+            }
+        }
+        p{
+            letter-spacing:0.1em;
+            #{$mar}:0 0 0 5px ;
+        }
+        .img2{
+            width: 90%;
+            height: 110%;
+        }
+        &:hover{
+            .hover-p2{
+            display: none;
+            }
+        }
+    }
+    .third-section-image{
+        @include display(column,center,center,nowrap);
+        &:hover{
+            .hover-p3{
+            display: none;
+            }
+        }
+    }
+    .fourth-section-image{
+        @include display(column,center,center,nowrap);
+        width:100%;
+        &:hover{
+            .hover-p4{
+            display: none;
+            }
+        }
+        .fourth-span-icon{
+            #{$mar}-top:2px;
+        }
+        p{
+            letter-spacing:0.1em; 
+            #{$mar}-top:2px;
+        }
+    }
+    .fifth-section-image{
+        @include display(column,center,center,nowrap);
+        &:hover{
+            .hover-p5{
+            display: none;
+            }
+        }
+        .fifth-span-icon{
+            #{$mar}-top:1px;
+        }
+        p{
+          #{$mar}-top:2px;
+        }
+    }
+    .sixth-section-image{
+        @include display(column,center,center,nowrap);
+        .img6{
+            width:85%;
+        height: 140%;
+        #{$mar}:0 0 0 26px;
+        }
+        &:hover{
+            .hover-p6{
+            display: none;
+            }
+        }
+        .sixth-span-icon{
+           #{$mar}: 54px 0 0 0 ;
+        }
+    }
+    .seventh-section-image{
+        @include display(column,center,center,nowrap);
+        grid-column: 1/1;
+        #{$mar}: -10px 0 0 0  ;
+        .img7{
+            width:90%;
+            height:160%;
+            #{$mar}: 0 0 0 18px  ;
+        }
+        &:hover{
+            .hover-p7{
+            display: none;
+            }
+        }
+        .seventh-span-icon{
+            #{$mar}: 112px 0 0 0;
+        }
+        p{
+            #{$mar}:1px 0 0 0;
+        }
+    }
+    .eighth-section-image{
+        @include display(column,center,center,nowrap);
+        &:hover{
+            .hover-p8{
+            display: none;
+            }
         }
     }
 
