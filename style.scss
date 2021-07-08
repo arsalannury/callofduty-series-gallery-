@@ -24,6 +24,7 @@ $f-s:"font-size";
 $t-align:"text-align";
 $box-s:"box-shadow";
 $bor-r:"border-radius";
+$leter:"letter-spacing";
 $sectionOneImageColor:#90be6d;
 $sectionTwoImageColor:#885d35;
 $main-color2:(
@@ -67,6 +68,10 @@ $main-color2:(
             opacity:70%;
         }
 }
+@mixin shadowRaduis {
+    #{$bor-r}:10px;
+    #{$box-s}:0 52px 2px 0 $nav-icon-color;
+}
     body{
         overflow-x: hidden;
     background-color:$main-color; 
@@ -77,7 +82,6 @@ $main-color2:(
         grid-auto-rows:400px;
         gap:5px;  
    #{$mar}:20px;
-   margin-top: 20px;
 }
 }
 .navbar-section{
@@ -86,7 +90,7 @@ $main-color2:(
         #{$padd}: 5px 0 5px 0;   
         background-image: linear-gradient(to right, #38b000,#8b5e34,$icon-color);
         opacity: 70%;
-        letter-spacing: .1em;
+        #{$leter}: .1em;
         color: $text-color2;
         &::first-letter{
             #{$f-s}:1.2em;
@@ -148,14 +152,13 @@ $main-color2:(
     .img1{
         #{$mar}:0 13% 0 7%;
         width:85%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+       @include shadowRaduis();
     }
     .first-span-icon{
         color:$star-color;
     }
     p{
-        letter-spacing:0.1em; 
+        #{$leter}:0.1em; 
     }
     .hover-p{
         @include hover-image-style(86%,50%,2px,31px,$sectionOneImageColor);
@@ -182,8 +185,7 @@ $main-color2:(
     .img2{
         #{$mar}:0 13% 0 7%;
         width:85%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+        @include shadowRaduis();
     }
     .second-span-icon{
         color:$star-color;
@@ -193,7 +195,7 @@ $main-color2:(
         }
     }
     p{
-        letter-spacing:0.1em;
+        #{$leter}:0.1em;
         #{$mar}:-38px 0 0 0 ;
     }
     .hover-p2{
@@ -219,14 +221,13 @@ $main-color2:(
     .img3{
         #{$mar}:0 13% 0 7%;
         width:85%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+        @include shadowRaduis();
     }
     .third-span-icon{
         color:$star-color;
     }
     p{
-        letter-spacing:0.1em;
+        #{$leter}:0.1em;
     }
     .hover-p3{
         @include hover-image-style(86%,35%,2px,31px,#7f7f7f);
@@ -251,8 +252,7 @@ $main-color2:(
     .img4{
         #{$mar}:10px 0 0 5%;
         width:90%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+        @include shadowRaduis();
     }
     .fourth-span-icon{
         color:$star-color;
@@ -262,7 +262,7 @@ $main-color2:(
         }
     }
     p{
-        letter-spacing:0.1em; 
+        #{$leter}:0.1em; 
         #{$mar}-top:-1px;
     }
     .hover-p4{
@@ -289,8 +289,7 @@ $main-color2:(
     .img5{
         #{$mar}:0 13% 0 7%;
         width:85%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+        @include shadowRaduis();
     }
     .fifth-span-icon{
         color:$star-color;
@@ -302,7 +301,7 @@ $main-color2:(
         }
     }
     p{
-        letter-spacing:0.1em;
+        #{$leter}:0.1em;
     }
     .hover-p5{
          #{$padd}:2px;
@@ -330,15 +329,14 @@ $main-color2:(
         #{$mar}:30px 13% 0 2.3%;
         width:95%;
         height:100%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+        @include shadowRaduis();
     }
     .sixth-span-icon{
         color:$star-color;
         #{$padd}: 25px 0 0 0;
     }
     p{
-        letter-spacing:0.1em;
+        #{$leter}:0.1em;
        #{$padd}: 0 0 35px 0;
     }
     .hover-p6{
@@ -367,15 +365,14 @@ $main-color2:(
     .img7{
         #{$mar}:20px 0 0 16%;
         width:70%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+        @include shadowRaduis();
     }
     .seventh-span-icon{
         color:$star-color;
         #{$mar}:-5px 0 0 2px;
     }
     p{
-        letter-spacing:0.1em;
+        #{$leter}:0.1em;
         #{$mar}:0 0 0 2px;
     }
     .hover-p7{
@@ -403,15 +400,14 @@ $main-color2:(
         #{$mar}:0 13px 0 10px;
         width:95%;
         height:130%;
-        #{$bor-r}:10px;
-        #{$box-s}:0 52px 2px 0 $nav-icon-color;
+        @include shadowRaduis();
     }
     .eighth-span-icon{
         color:$star-color;
         #{$mar}: 58px 0 0 0;
     }
     p{
-        letter-spacing:0.1em;
+        #{$leter}:0.1em;
        #{$mar}: 0 0 48px 0;
     }
     .hover-p8{
@@ -434,16 +430,150 @@ $main-color2:(
 
 }
 
-
-// media screen style !!!!!!!!!!!! //
-@media screen and (max-width:600px ){
-    .seventh-section-image{
-        grid-column: 1/1;
+// media screen style !!!!!!!!!!!!
+@media screen and (min-width:400px ) and (max-width :600px){
+body{
+    .main{
+       grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+       #{$mar}-top:0;
     }
 }
-@media screen and (max-width:400px ) {
+.navbar-section{
+    nav{
+        .navbar-main{
+            #{$mar}-left:80%;
+        }
+    }
+}
+    .first-section-image{
+        @include display(column,center,center,nowrap);
+        .img1{
+            width:77%;
+            #{$mar}:0 0 0 12%;
+        }
+        &:hover{
+            .hover-p{
+                display:none;
+            }
+        }
+    }
+    .second-section-image{
+        @include display(column,center,center,nowrap);
+        .img2{
+            width:80%;
+            #{$mar}:90px 0 70px 10%; 
+        }
+        &:hover{
+            .hover-p2{
+                display: none;
+            }
+        }
+    }
+    .third-section-image{
+        @include display(column,center,center,nowrap);
+        .img3{
+           width:80%;
+           #{$mar}: 222px 0 0 10%;
+        }
+        &:hover{
+            .hover-p3{
+                display:none;
+            }
+        }
+    }
+    .fourth-section-image{
+        @include display(column,center,center,nowrap);
+        .img4{
+            width:85%;
+            #{$mar}:345px 0 0 7%;
+        }
+        &:hover{
+            .hover-p4{
+                display:none;
+            }
+        }
+        .fourth-span-icon{
+            #{$mar}:1px 0 0 15px;
+        }
+        p{
+            #{$mar}-top:1px;
+        }
+    }
+    .fifth-section-image{
+        @include display(column,center,center,nowrap);
+        .img5{
+            width:80%;
+            #{$mar}:420px 0 0 9.5%;
+        }
+        &:hover{
+            .hover-p5{
+                display:none;
+            }
+        }
+    }
+    .sixth-section-image{
+        @include display(column,center,center,nowrap);
+        .img6{
+            width:85%;
+            height:auto;
+            #{$mar}:450px 0 0 7%;
+        }
+        &:hover{
+            .hover-p6{
+                display:none;
+            }
+        }
+        .sixth-span-icon{
+         #{$mar}-top:5px;
+         #{$padd}:0;
+        }
+        p{
+            #{$mar}-top:1px;
+            #{$padd}:0;
+        }
+    }
+    .seventh-section-image{
+        grid-column:1/1;
+        @include display(column,center,center,nowrap);
+        .img7{
+            width:90%;
+            #{$mar}:350px 0 0 4.5%;
+        }
+        &:hover{
+            .hover-p7{
+                display:none;
+            }
+        }
+        .seventh-span-icon{
+            #{$mar}:4px 0 0 0;
+        }
+        p{
+            #{$mar}:1px 0 0 0;
+        }
+    }
+    .eighth-section-image{
+        @include display(column,flex-start,center,nowrap);
+        .img8{
+            width:85%;
+            height:auto;
+           #{$mar}:160px 0 45px 7%;
+        }
+        &:hover{
+            .hover-p8{
+                display:none;
+            }
+        }
+        .eighth-span-icon{
+            #{$mar}: -40px 0 0 0;
+        }
+        p{
+           #{$mar}: 0 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width : 399px) {
     body{
-        overflow-x: hidden;
         .main{
             grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
         }
@@ -453,128 +583,124 @@ $main-color2:(
             #{$padd}: 8px 0 8px 0;
         }
         nav{
-           .navbar-main{
-            #{$mar}-left:72%;
-           }
+            .navbar-main{
+                #{$mar}-left:80%;
+            }
         }
     }
     .first-section-image{
         @include display(column,center,center,nowrap);
-        // .img1{
-        //  height:118%;
-        // }
         &:hover{
             .hover-p{
-            display: none;
+                display: none;
             }
         }
     }
     .second-section-image{
-        @include display(column,center,center,nowrap);
-        #{$mar}: 0 10px 20px 0;
-        .second-span-icon{
-            color:$star-color;
-            #{$mar}: 26px 0 0 5px ;
-            #last-star{
-                color: $last-star-color;
+            @include display(column,center,center,nowrap);
+            .img2{
+                height:120%;
+                #{$mar}:-20px 13% 0 7%;
+            }
+            &:hover{
+                .hover-p2{
+                    display: none;
+                }
+            }
+            .second-span-icon{
+                color:$star-color;
+                #{$mar}: 27px 0 0 0;
+            }
+            p{
+                #{$mar}:0 0 0 0 ;
             }
         }
-        p{
-            letter-spacing:0.1em;
-            #{$mar}:0 0 0 5px ;
-        }
-        .img2{
-            width: 90%;
-            height: 110%;
-        }
-        &:hover{
-            .hover-p2{
-            display: none;
+        .third-section-image{
+            @include display(column,center,center,nowrap);
+            &:hover{
+                .hover-p3{
+                    display: none;
+                }
             }
         }
-    }
-    .third-section-image{
-        @include display(column,center,center,nowrap);
-        &:hover{
-            .hover-p3{
-            display: none;
+        .fourth-section-image{
+            @include display(column,center,center,nowrap);
+            &:hover{
+                .hover-p4{
+                    display: none;
+                }
+            }
+            .fourth-span-icon{
+                color:$star-color;
+                #{$mar}-top:5px;
+            }
+            p{
+                #{$mar}-top:1px;
             }
         }
-    }
-    .fourth-section-image{
-        @include display(column,center,center,nowrap);
-        width:100%;
-        &:hover{
-            .hover-p4{
-            display: none;
+        .fifth-section-image{
+            @include display(column,center,center,nowrap);
+            .img5{
+                #{$mar}:40px 13% 0 7%;
+            }
+            &:hover{
+                .hover-p5{
+                    display: none;
+                }
             }
         }
-        .fourth-span-icon{
-            #{$mar}-top:2px;
-        }
-        p{
-            letter-spacing:0.1em; 
-            #{$mar}-top:2px;
-        }
-    }
-    .fifth-section-image{
-        @include display(column,center,center,nowrap);
-        &:hover{
-            .hover-p5{
-            display: none;
+        .sixth-section-image{
+            @include display(column,center,center,nowrap);
+            .img6{
+                #{$mar}:60px 13% 0 2.3%;
+            }
+            &:hover{
+                .hover-p6{
+                    display: none;
+                }
+            }
+            .sixth-span-icon{
+                color:$star-color;
+                #{$padd}: 65px 0 0 0;
+            }
+            p{
+               #{$padd}: 0 0 0 0;
             }
         }
-        .fifth-span-icon{
-            #{$mar}-top:1px;
-        }
-        p{
-          #{$mar}-top:2px;
-        }
-    }
-    .sixth-section-image{
-        @include display(column,center,center,nowrap);
-        .img6{
-            width:85%;
-        height: 140%;
-        #{$mar}:0 0 0 26px;
-        }
-        &:hover{
-            .hover-p6{
-            display: none;
-            }
-        }
-        .sixth-span-icon{
-           #{$mar}: 54px 0 0 0 ;
-        }
-    }
     .seventh-section-image{
+        grid-column:1/1;
         @include display(column,center,center,nowrap);
-        grid-column: 1/1;
-        #{$mar}: -10px 0 0 0  ;
         .img7{
-            width:90%;
-            height:160%;
-            #{$mar}: 0 0 0 18px  ;
+            width:95%;
+            #{$mar}:0 0 0 10px;
         }
         &:hover{
             .hover-p7{
-            display: none;
+                display: none;
             }
         }
         .seventh-span-icon{
-            #{$mar}: 112px 0 0 0;
+            color:$star-color;
+            #{$mar}:5px 0 0 2px;
         }
         p{
-            #{$mar}:1px 0 0 0;
+            #{$mar}:0 0 0 2px;
         }
     }
     .eighth-section-image{
         @include display(column,center,center,nowrap);
         &:hover{
             .hover-p8{
-            display: none;
+                display: none;
             }
         }
+        .eighth-span-icon{
+            color:$star-color;
+            #{$mar}: 60px 0 0 0;
+        }
+        p{
+           #{$mar}: 0 0 0 0;
+        }
     }
-
+    
 }
