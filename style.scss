@@ -431,6 +431,155 @@ $main-color2:(
 }
 
 // media screen style !!!!!!!!!!!!
+@media screen and (min-width : 1025px) and (max-width : 1249px) {
+.first-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p{
+            display:none;
+        }
+    }
+    .img1{
+     #{$mar}:-15px 0 0 8%;
+    width:62%;
+    }
+    .first-span-icon{
+    #{$mar}: 0 125px 0 0;
+    }
+    p{
+        #{$mar}: 0 115px 0 0;
+    }
+}
+.second-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p2{
+            display:none;
+        }
+    }
+    .img2{
+    width:67%;
+    #{$mar}:-100px 0 0 24%;
+    }
+    .second-span-icon{
+        #{$mar}:0 0 0 87px ;
+    }
+    p{
+        #{$mar}:0 0 0 87px ;
+    }
+}
+.third-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p3{
+            display:none;
+        }
+    }
+    .img3{
+    width: 61%;
+    #{$mar}:60px 0 0 8%;
+    }
+    .third-span-icon{
+     #{$mar}:0 129px 0 0;
+    }
+    p{
+        #{$mar}:0 129px 0 0;
+    }
+}
+.fourth-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p4{
+            display:none;
+        }
+    }
+    .img4{
+        width:80%;
+        #{$mar}:0 0 0 15%;
+    }
+    .fourth-span-icon{
+        #{$mar}:2px 0 0 50px;
+        
+    }
+    p{
+        #{$mar}:1px 0 0 35px;
+    }
+}
+.fifth-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p5{
+            display:none;
+        }
+    }
+    .img5{
+        width:67%;
+        #{$mar}:95px 0 0 5%;
+    }
+    .fifth-span-icon{
+       #{$mar}: 0 133px 0 0;
+    }
+    p{
+       #{$mar}:0 134px 0 0;
+    }
+}
+.sixth-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p6{
+            display:none;
+        }
+    }
+    .img6{
+        width:70%;
+        #{$mar}:50px 0 0 15%;
+    }
+    .sixth-span-icon{
+        #{$mar}:28px 0 0 0;
+    }
+    p{
+       #{$mar}:1px 0 0 0;
+    }
+}
+.seventh-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p7{
+            display:none;
+        }
+    }
+    .img7{
+        width:75%;
+        #{$mar}:20px 0 0 4%;
+    }
+    .seventh-span-icon{
+        #{$mar}:2px 105px 0 0;
+    }
+    p{
+        #{$mar}:0 105px 0 0;
+    }
+grid-column:1/1;
+}
+.eighth-section-image{
+    @include display(column,center,center,nowrap);
+    &:hover{
+        .hover-p8{
+            display:none;
+        }
+    }
+    .img8{
+        width:80%;
+        height: auto;
+        #{$mar}:0 0 0 10%;
+    }
+    .eighth-span-icon{
+        #{$mar}: 3px 0 0 0;
+    }
+    p{
+       #{$mar}: 0 0 0 0;
+    }
+}
+}
 @media screen and (min-width : 801px) and (max-width : 1024px){
     body{
         .main{
